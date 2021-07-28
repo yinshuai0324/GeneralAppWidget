@@ -9,14 +9,36 @@
     <attr name="borderColor" format="color" />
     <!--边框宽度-->
     <attr name="borderWidth" format="dimension" />
+    <!--左上角圆角值-->
+    <attr name="radiusTopLeft" format="dimension" />
+    <!--右上角圆角值-->
+    <attr name="radiusTopRight" format="dimension" />
+    <!--左下角圆角值-->
+    <attr name="radiusBottomLeft" format="dimension" />
+    <!--右下角圆角值-->
+    <attr name="radiusBottomRight" format="dimension" />
+    <!--边框是否覆盖内容-->
+    <attr name="borderCover" format="boolean" />
 
+    <attr name="loadingRes" format="reference" />
+    <attr name="errorRes" format="reference" />
+    <attr name="loadCallback" format="boolean" />
 
     <!--网络图片-->
     <declare-styleable name="NetworkImageView">
         <attr name="url" />
-        <attr name="loadingRes" format="reference" />
-        <attr name="errorRes" format="reference" />
-        <attr name="loadCallback" format="boolean" />
+        <attr name="loadingRes" />
+        <attr name="errorRes" />
+        <attr name="loadCallback" />
+    </declare-styleable>
+
+
+    <!--网络图片-->
+    <declare-styleable name="NetworkRoundImageView">
+        <attr name="url" />
+        <attr name="loadingRes" />
+        <attr name="errorRes"  />
+        <attr name="loadCallback"  />
     </declare-styleable>
 
 
@@ -28,6 +50,18 @@
         <attr name="borderColor" />
         <!--边框宽度-->
         <attr name="borderWidth" />
+        <!--左上角圆角值-->
+        <attr name="radiusTopLeft" />
+        <!--右上角圆角值-->
+        <attr name="radiusTopRight" />
+        <!--左下角圆角值-->
+        <attr name="radiusBottomLeft" />
+        <!--右下角圆角值-->
+        <attr name="radiusBottomRight" />
+        <!--边框是否覆盖图片-->
+        <attr name="borderCover" />
+        <!--内边距的颜色-->
+        <attr name="paddingColor" format="color" />
     </declare-styleable>
 
 

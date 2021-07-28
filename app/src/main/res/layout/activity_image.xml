@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/purple_500"
     tools:context=".ui.ImageActivity">
 
     <LinearLayout
@@ -30,14 +29,32 @@
             android:layout_height="wrap_content"
             android:text="圆角图片" />
 
-        <com.general.widget.image.RoundImageView
-            android:id="@+id/roundImage"
+<!--        <com.general.widget.image.RoundImageView-->
+<!--            android:id="@+id/roundImage"-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="100dp"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:src="@drawable/ic_header"-->
+<!--            app:borderColor="@color/purple_700"-->
+<!--            app:borderWidth="15dp"-->
+<!--            app:radius="50dp" />-->
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="网络圆角图片" />
+
+        <com.general.widget.image.NetworkRoundImageView
+            android:id="@+id/networkRoundImage"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_marginTop="10dp"
-            app:borderWidth="5dp"
+            app:radius="5dp"
+            app:loadingRes="@drawable/ic_header"
+            app:borderWidth="10dp"
             app:borderColor="@color/purple_700"
-            android:src="@drawable/ic_header" />
+            android:layout_marginTop="10dp" />
 
     </LinearLayout>
 

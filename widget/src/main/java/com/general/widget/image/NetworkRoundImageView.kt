@@ -16,7 +16,7 @@ import com.general.widget.R
  * 作用描述：网络图片
  */
 
-class NetworkImageView : AppCompatImageView, NetworkImageViewTarget.OnLoadingStatusChangeListener {
+class NetworkRoundImageView : RoundImageView, NetworkImageViewTarget.OnLoadingStatusChangeListener {
     private var imageUrl: String = ""
     private var loadingRes: Int = 0
     private var errorRes: Int = 0
@@ -29,7 +29,7 @@ class NetworkImageView : AppCompatImageView, NetworkImageViewTarget.OnLoadingSta
 
     constructor(context: Context) : this(context, null)
     constructor(context: Context, attributeSet: AttributeSet?) : super(context, attributeSet) {
-        val attrs = context.obtainStyledAttributes(attributeSet, R.styleable.NetworkImageView)
+        val attrs = context.obtainStyledAttributes(attributeSet, R.styleable.NetworkRoundImageView)
         imageUrl = attrs.getString(R.styleable.NetworkImageView_url) ?: ""
         loadingRes = attrs.getResourceId(R.styleable.NetworkImageView_loadingRes, 0)
         errorRes = attrs.getResourceId(R.styleable.NetworkImageView_errorRes, 0)
@@ -66,6 +66,7 @@ class NetworkImageView : AppCompatImageView, NetworkImageViewTarget.OnLoadingSta
     }
 
     override fun onStart() {
+        Log.i("===>>>", "开始加载图片:${imageUrl}")
     }
 
     override fun onError() {
@@ -75,6 +76,7 @@ class NetworkImageView : AppCompatImageView, NetworkImageViewTarget.OnLoadingSta
     }
 
     override fun onSuccess() {
+        Log.i("===>>>", "开始加载图片完成")
         if (::onLoaderListener.isInitialized) {
             onLoaderListener.invoke(true)
         }
