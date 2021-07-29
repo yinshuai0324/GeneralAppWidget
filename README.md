@@ -8,7 +8,6 @@
  
 ```
     Step 1. 添加 JitPack 仓库到你的项目
-    
     allprojects {
     	repositories {
     		maven { url 'https://jitpack.io' }
@@ -16,7 +15,6 @@
     }
 
     Step 2. 添加 当前UI库的依赖
-
     implementation 'com.github.yinshuai0324:GeneralAppWidget:tag'
  ```
 
