@@ -3,6 +3,11 @@
 ### 项目简介
     提供一套通用的UI组件库
     
+    
+### 项目背景
+
+    在项目开发的过程中提供一套通用的UI组件库，拆箱即用，无需配置，api统一化
+    
 ### 集成方法
 项目当前最新版本：[![](https://jitpack.io/v/yinshuai0324/GeneralAppWidget.svg)](https://jitpack.io/#yinshuai0324/GeneralAppWidget)
  
@@ -18,9 +23,6 @@
     implementation 'com.github.yinshuai0324:GeneralAppWidget:tag'
  ```
 
-### 项目背景
-
-    在项目开发的过程中提供一套通用的UI组件库，拆箱即用，无需配置，api统一化
     
 ### 项目功能
 
