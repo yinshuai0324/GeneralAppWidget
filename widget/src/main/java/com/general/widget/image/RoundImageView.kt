@@ -18,7 +18,7 @@ import kotlin.math.max
  * 创建时间：2021/7/20 16:51
  * 作用描述：圆角图片
  */
-open class RoundImageView : AppCompatImageView {
+open class RoundImageView : BaseImageView {
 
     private var radius: Float = 0f
     private var borderColor: Int = 0
@@ -119,31 +119,34 @@ open class RoundImageView : AppCompatImageView {
         roundPath.fillType = Path.FillType.INVERSE_WINDING
         //新建图层
         canvas.saveLayer(0f, 0f, width, height, null)
-
         val bitmap = bitmap?.get()
-        Log.i("===>>>", "bitmap:${bitmap?.width}-${bitmap?.height}")
-
         if (bitmap != null) {
-            Log.i("===>>>", "")
             //锁定画布
             canvas.save()
-            bitmapScope.left = 0
-            bitmapScope.top = 0
-            bitmapScope.right = bitmap.width
-            bitmapScope.bottom = bitmap.height
+            if (borderWidth > 0) {
+                bitmapScope.left = 0
+                bitmapScope.top = 0
+                bitmapScope.right = bitmap.width
+                bitmapScope.bottom = bitmap.height
 
-            val borderValue = if (borderCover) 0f else borderWidth / 2
+                val borderValue = if (borderCover) 0f else borderWidth / 2
 
-            bitmapPosition.left = borderValue + paddingLeft
-            bitmapPosition.top = borderValue + paddingTop
-            bitmapPosition.right = width - borderValue - paddingRight
-            bitmapPosition.bottom = height - borderValue - paddingBottom
-            Log.i("===>>>","绘制bitmap")
-            //画图片
-            canvas.drawBitmap(bitmap, bitmapScope, bitmapPosition, paint)
+                bitmapPosition.left = borderValue + paddingLeft
+                bitmapPosition.top = borderValue + paddingTop
+                bitmapPosition.right = width - borderValue - paddingRight
+                bitmapPosition.bottom = height - borderValue - paddingBottom
+                //更新画笔
+                updateBitmapPaint(bitmap)
+                //画图片
+                canvas.drawBitmap(bitmap, bitmapScope, bitmapPosition, paint)
+            } else {
+                //如果没有边框的话 直接调用原本的方法进行绘制
+                super.onDraw(canvas)
+            }
             //恢复
             canvas.restore()
         }
+        super.onDraw(canvas)
         //绘制边框
         if (borderWidth > 0 && borderColor != 0) {
             //画padding的矩形
@@ -159,8 +162,14 @@ open class RoundImageView : AppCompatImageView {
         canvas.restore()
     }
 
+    private fun updateBitmapPaint(bitmap: Bitmap) {
+        if (paint.shader == null) {
+            paint.shader = BitmapShader(bitmap, Shader.TileMode.CLAMP, Shader.TileMode.CLAMP)
+        }
+    }
 
     private fun updatePaddingPaint() {
+        paint.shader = null
         paint.strokeWidth = paddingLeft.toFloat()
         paint.style = Paint.Style.STROKE
         paint.color = paddingColor

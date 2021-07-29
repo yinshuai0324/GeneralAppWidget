@@ -76,7 +76,7 @@ class NetworkRoundImageView : RoundImageView, NetworkImageViewTarget.OnLoadingSt
     }
 
     override fun onSuccess() {
-        Log.i("===>>>", "开始加载图片完成")
+        Log.i("===>>>", "加载图片完成")
         if (::onLoaderListener.isInitialized) {
             onLoaderListener.invoke(true)
         }

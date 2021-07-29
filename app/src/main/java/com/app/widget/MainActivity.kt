@@ -3,6 +3,7 @@ package com.app.widget
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.Settings
 import android.view.View
 import com.app.widget.databinding.ActivityMainBinding
 import com.app.widget.ui.ImageActivity
@@ -14,6 +15,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         viewBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(viewBinding.root)
+
+        Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION
     }
 
 

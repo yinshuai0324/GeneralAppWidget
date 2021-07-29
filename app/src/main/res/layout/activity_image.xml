@@ -29,15 +29,15 @@
             android:layout_height="wrap_content"
             android:text="圆角图片" />
 
-<!--        <com.general.widget.image.RoundImageView-->
-<!--            android:id="@+id/roundImage"-->
-<!--            android:layout_width="100dp"-->
-<!--            android:layout_height="100dp"-->
-<!--            android:layout_marginTop="10dp"-->
-<!--            android:src="@drawable/ic_header"-->
-<!--            app:borderColor="@color/purple_700"-->
-<!--            app:borderWidth="15dp"-->
-<!--            app:radius="50dp" />-->
+        <com.general.widget.image.RoundImageView
+            android:id="@+id/roundImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_header"
+            app:borderColor="@color/purple_700"
+            app:borderWidth="15dp"
+            app:radius="50dp" />
 
 
         <TextView
@@ -50,11 +50,11 @@
             android:id="@+id/networkRoundImage"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            app:radius="5dp"
-            app:loadingRes="@drawable/ic_header"
-            app:borderWidth="10dp"
+            android:layout_marginTop="10dp"
             app:borderColor="@color/purple_700"
-            android:layout_marginTop="10dp" />
+            app:borderWidth="0dp"
+            app:loadingRes="@drawable/ic_header"
+            app:radius="5dp" />
 
     </LinearLayout>
 

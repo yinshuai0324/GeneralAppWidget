@@ -1,6 +1,7 @@
 package com.general.widget.image
 
 import android.content.Context
+import android.graphics.Canvas
 import android.text.TextUtils
 import android.util.AttributeSet
 import android.util.Log
@@ -9,6 +10,7 @@ import coil.annotation.ExperimentalCoilApi
 import coil.request.ImageRequest
 import coil.target.ImageViewTarget
 import com.general.widget.R
+import com.general.widget.WidgetManage
 
 /**
  * 创建者：yinshuai
@@ -16,7 +18,7 @@ import com.general.widget.R
  * 作用描述：网络图片
  */
 
-class NetworkImageView : AppCompatImageView, NetworkImageViewTarget.OnLoadingStatusChangeListener {
+class NetworkImageView : BaseImageView, NetworkImageViewTarget.OnLoadingStatusChangeListener {
     private var imageUrl: String = ""
     private var loadingRes: Int = 0
     private var errorRes: Int = 0
