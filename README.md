@@ -4,21 +4,21 @@
     提供一套通用的UI组件库
     
 ### 集成方法
+项目当前最新版本：[![](https://jitpack.io/v/yinshuai0324/GeneralAppWidget.svg)](https://jitpack.io/#yinshuai0324/GeneralAppWidget)
+ 
+```
+    Step 1. 添加 JitPack 仓库到你的项目
+    
+    allprojects {
+    	repositories {
+    		maven { url 'https://jitpack.io' }
+    	}
+    }
 
-    项目当前最新版本：[![](https://jitpack.io/v/yinshuai0324/GeneralAppWidget.svg)](https://jitpack.io/#yinshuai0324/GeneralAppWidget)
-    ```
-        Step 1. 添加 JitPack 仓库到你的项目
-        
-        allprojects {
-        	repositories {
-        		maven { url 'https://jitpack.io' }
-        	}
-        }
+    Step 2. 添加 当前UI库的依赖
 
-        Step 2. 添加 当前UI库的依赖
-
-        implementation 'com.github.yinshuai0324:GeneralAppWidget:tag'
-    ```
+    implementation 'com.github.yinshuai0324:GeneralAppWidget:tag'
+ ```
 
 ### 项目背景
 
