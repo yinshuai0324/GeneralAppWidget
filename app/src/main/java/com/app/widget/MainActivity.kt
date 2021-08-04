@@ -6,7 +6,9 @@ import android.os.Bundle
 import android.provider.Settings
 import android.view.View
 import com.app.widget.databinding.ActivityMainBinding
+import com.app.widget.ui.ButtonActivity
 import com.app.widget.ui.ImageActivity
+import com.app.widget.ui.LayoutActivity
 
 class MainActivity : AppCompatActivity() {
     lateinit var viewBinding: ActivityMainBinding
@@ -23,6 +25,8 @@ class MainActivity : AppCompatActivity() {
     fun onHomeBtnClick(view: View) {
         when (view.id) {
             R.id.imageBtn -> startActivity(Intent(this, ImageActivity::class.java))
+            R.id.layoutBtn -> startActivity(Intent(this, LayoutActivity::class.java))
+            R.id.buttonBtn -> startActivity(Intent(this, ButtonActivity::class.java))
         }
     }
 

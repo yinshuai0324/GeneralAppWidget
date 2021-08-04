@@ -19,9 +19,15 @@
     <attr name="radiusBottomRight" format="dimension" />
     <!--边框是否覆盖内容-->
     <attr name="borderCover" format="boolean" />
-
+    <!--是否是圆-->
+    <attr name="isCircle" format="boolean" />
+    <!--是否禁用-->
+    <attr name="disable" format="boolean" />
+    <!--加载中显示的图片-->
     <attr name="loadingRes" format="reference" />
+    <!--加载错误显示的图片-->
     <attr name="errorRes" format="reference" />
+    <!--是否有加载回调-->
     <attr name="loadCallback" format="boolean" />
 
     <!--网络图片-->
@@ -37,8 +43,8 @@
     <declare-styleable name="NetworkRoundImageView">
         <attr name="url" />
         <attr name="loadingRes" />
-        <attr name="errorRes"  />
-        <attr name="loadCallback"  />
+        <attr name="errorRes" />
+        <attr name="loadCallback" />
     </declare-styleable>
 
 
@@ -64,5 +70,138 @@
         <attr name="paddingColor" format="color" />
     </declare-styleable>
 
+    <!--圆角布局-->
+    <declare-styleable name="RoundLayout">
+        <!--圆角-->
+        <attr name="radius" />
+        <!--边框颜色-->
+        <attr name="borderColor" />
+        <!--边框宽度-->
+        <attr name="borderWidth" />
+        <!--左上角圆角值-->
+        <attr name="radiusTopLeft" />
+        <!--右上角圆角值-->
+        <attr name="radiusTopRight" />
+        <!--左下角圆角值-->
+        <attr name="radiusBottomLeft" />
+        <!--右下角圆角值-->
+        <attr name="radiusBottomRight" />
+        <!--是否圆形-->
+        <attr name="isCircle" />
+    </declare-styleable>
 
+    <!--圆角布局 只是为了有提示-->
+    <declare-styleable name="RoundLinearLayout">
+        <!--圆角-->
+        <attr name="radius" />
+        <!--边框颜色-->
+        <attr name="borderColor" />
+        <!--边框宽度-->
+        <attr name="borderWidth" />
+        <!--左上角圆角值-->
+        <attr name="radiusTopLeft" />
+        <!--右上角圆角值-->
+        <attr name="radiusTopRight" />
+        <!--左下角圆角值-->
+        <attr name="radiusBottomLeft" />
+        <!--右下角圆角值-->
+        <attr name="radiusBottomRight" />
+        <!--是否圆形-->
+        <attr name="isCircle" />
+    </declare-styleable>
+
+
+    <!--圆角布局 只是为了有提示-->
+    <declare-styleable name="RoundRelativeLayout">
+        <!--圆角-->
+        <attr name="radius" />
+        <!--边框颜色-->
+        <attr name="borderColor" />
+        <!--边框宽度-->
+        <attr name="borderWidth" />
+        <!--左上角圆角值-->
+        <attr name="radiusTopLeft" />
+        <!--右上角圆角值-->
+        <attr name="radiusTopRight" />
+        <!--左下角圆角值-->
+        <attr name="radiusBottomLeft" />
+        <!--右下角圆角值-->
+        <attr name="radiusBottomRight" />
+        <!--是否圆形-->
+        <attr name="isCircle" />
+    </declare-styleable>
+
+
+    <!--圆角布局 只是为了有提示-->
+    <declare-styleable name="RoundFrameLayout">
+        <!--圆角-->
+        <attr name="radius" />
+        <!--边框颜色-->
+        <attr name="borderColor" />
+        <!--边框宽度-->
+        <attr name="borderWidth" />
+        <!--左上角圆角值-->
+        <attr name="radiusTopLeft" />
+        <!--右上角圆角值-->
+        <attr name="radiusTopRight" />
+        <!--左下角圆角值-->
+        <attr name="radiusBottomLeft" />
+        <!--右下角圆角值-->
+        <attr name="radiusBottomRight" />
+        <!--是否圆形-->
+        <attr name="isCircle" />
+    </declare-styleable>
+
+
+    <!--圆角布局 只是为了有提示-->
+    <declare-styleable name="RoundConstraintLayout">
+        <!--圆角-->
+        <attr name="radius" />
+        <!--边框颜色-->
+        <attr name="borderColor" />
+        <!--边框宽度-->
+        <attr name="borderWidth" />
+        <!--左上角圆角值-->
+        <attr name="radiusTopLeft" />
+        <!--右上角圆角值-->
+        <attr name="radiusTopRight" />
+        <!--左下角圆角值-->
+        <attr name="radiusBottomLeft" />
+        <!--右下角圆角值-->
+        <attr name="radiusBottomRight" />
+        <!--是否圆形-->
+        <attr name="isCircle" />
+    </declare-styleable>
+
+
+    <!--圆角按钮-->
+    <declare-styleable name="AppButton">
+        <!--圆角-->
+        <attr name="radius" />
+        <!--边框颜色-->
+        <attr name="borderColor" />
+        <!--边框宽度-->
+        <attr name="borderWidth" />
+        <!--左上角圆角值-->
+        <attr name="radiusTopLeft" />
+        <!--右上角圆角值-->
+        <attr name="radiusTopRight" />
+        <!--左下角圆角值-->
+        <attr name="radiusBottomLeft" />
+        <!--右下角圆角值-->
+        <attr name="radiusBottomRight" />
+        <!--是否圆形-->
+        <attr name="isCircle" />
+        <!--是否禁用-->
+        <attr name="disable" />
+        <!--禁用时的背景颜色-->
+        <attr name="disableColor" format="color" />
+        <!--点击时的效果-->
+        <attr name="clickAnimType" format="enum">
+            <!--默认效果 有一个打底颜色-->
+            <enum name="defaultAnim" value="1" />
+            <!--缩放动画-->
+            <enum name="zoomAnim" value="2" />
+        </attr>
+    </declare-styleable>
 </resources>
