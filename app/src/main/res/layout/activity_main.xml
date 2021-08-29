@@ -11,6 +11,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
         android:padding="10dp">
 
         <Button
@@ -19,6 +20,13 @@
             android:layout_height="wrap_content"
             android:onClick="onHomeBtnClick"
             android:text="图片相关" />
+
+        <Button
+            android:id="@+id/toastBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onHomeBtnClick"
+            android:text="Toast相关" />
 
     </LinearLayout>
 

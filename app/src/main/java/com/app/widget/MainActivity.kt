@@ -7,6 +7,7 @@ import android.provider.Settings
 import android.view.View
 import com.app.widget.databinding.ActivityMainBinding
 import com.app.widget.ui.ImageActivity
+import com.app.widget.ui.ToastActivity
 
 class MainActivity : AppCompatActivity() {
     lateinit var viewBinding: ActivityMainBinding
@@ -23,6 +24,7 @@ class MainActivity : AppCompatActivity() {
     fun onHomeBtnClick(view: View) {
         when (view.id) {
             R.id.imageBtn -> startActivity(Intent(this, ImageActivity::class.java))
+            R.id.toastBtn -> startActivity(Intent(this, ToastActivity::class.java))
         }
     }
 

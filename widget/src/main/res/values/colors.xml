@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Toast警告色-->
+    <color name="color_F47920">#F47920</color>
+    <!--Toast错误色-->
+    <color name="color_EF4136">#EF4136</color>
+    <!--Toast普通色-->
+    <color name="color_AFB4DB">#AFB4DB</color>
+    <!--Toast成功色-->
+    <color name="color_45B97C">#45B97C</color>
+    <color name="color_FFFFFF">#FFFFFF</color>
+</resources>
