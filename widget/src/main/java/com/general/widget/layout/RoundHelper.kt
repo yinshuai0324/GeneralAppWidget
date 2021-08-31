@@ -220,6 +220,16 @@ class RoundHelper {
 
         //绘制圆角
         drawPath.reset()
+
+        val offset = 1
+        if (borderWidth > 0) {
+            //加这个的原因的 缩小画布的时候 会导致有1个像素的误差 在这里补齐
+            viewRectF.left = viewRectF.left - offset
+            viewRectF.top = viewRectF.top - offset
+            viewRectF.right = viewRectF.right + offset
+            viewRectF.bottom = viewRectF.bottom + offset
+        }
+
         drawPath.addRoundRect(viewRectF, roundParams, Path.Direction.CCW)
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             mTempPath.reset()
