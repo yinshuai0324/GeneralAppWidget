@@ -215,6 +215,10 @@ class RoundHelper {
             // 缩小画布，使内容不被borders覆盖
             canvas.scale(sx, sy, width / 2.0f, height / 2.0f)
         }
+        //绘制背景颜色
+        paint.color = backgroundColor
+        canvas.drawRect(viewRectF, paint)
+        paint.reset()
     }
 
 
@@ -225,10 +229,6 @@ class RoundHelper {
         paint.reset()
         paint.isAntiAlias = true
         paint.style = Paint.Style.FILL
-        //绘制背景颜色
-        paint.color = backgroundColor
-        canvas.drawRect(viewRectF, paint)
-        paint.reset()
         //开始绘制圆角
         paint.xfermode = xfermode
         drawPath.reset()
