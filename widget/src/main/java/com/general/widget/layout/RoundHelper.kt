@@ -2,6 +2,7 @@ package com.general.widget.layout
 
 import android.content.Context
 import android.graphics.*
+import android.graphics.drawable.ColorDrawable
 import android.os.Build
 import android.util.AttributeSet
 import android.view.View
@@ -116,6 +117,11 @@ class RoundHelper {
      */
     private var height: Int = 0
 
+    /**
+     * 背景颜色
+     */
+    private var backgroundColor: Int = 0
+
 
     /**
      * 初始化配置
@@ -123,9 +129,12 @@ class RoundHelper {
     fun init(context: Context, attributeSet: AttributeSet?, view: View) {
         mContext = context
         rootView = view
-        if (rootView is ViewGroup && rootView.background == null) {
-            rootView.setBackgroundColor(Color.parseColor("#00000000"))
+        if (rootView.background != null && rootView.background is ColorDrawable) {
+            backgroundColor = (rootView.background as ColorDrawable)?.color
         }
+        //把背景设置为透明 等下自己绘制颜色
+        val defaultColor = Color.parseColor("#00000000")
+        rootView.setBackgroundColor(defaultColor)
         attributeSet?.let {
             val attr = context.obtainStyledAttributes(it, R.styleable.RoundLayout)
             borderWidth = attr.getDimension(R.styleable.RoundLayout_borderWidth, 0f)
@@ -216,9 +225,12 @@ class RoundHelper {
         paint.reset()
         paint.isAntiAlias = true
         paint.style = Paint.Style.FILL
+        //绘制背景颜色
+        paint.color = backgroundColor
+        canvas.drawRect(viewRectF, paint)
+        paint.reset()
+        //开始绘制圆角
         paint.xfermode = xfermode
-
-        //绘制圆角
         drawPath.reset()
         drawPath.addRoundRect(viewRectF, roundParams, Path.Direction.CCW)
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -229,10 +241,12 @@ class RoundHelper {
         } else {
             canvas.drawPath(drawPath, paint)
         }
+
         //去除混合模式
         paint.xfermode = null
         //恢复
         canvas.restore()
+
 
         //绘制边框
         if (borderWidth > 0) {
@@ -242,6 +256,8 @@ class RoundHelper {
             drawPath.reset()
             drawPath.addRoundRect(borderRectF, borderRoundParams, Path.Direction.CCW)
             canvas.drawPath(drawPath, paint)
+
+
         }
     }
 

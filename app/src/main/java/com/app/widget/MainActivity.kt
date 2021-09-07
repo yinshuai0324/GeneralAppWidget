@@ -17,8 +17,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         viewBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(viewBinding.root)
-
-        Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION
     }
 
 
