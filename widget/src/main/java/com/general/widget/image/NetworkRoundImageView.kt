@@ -35,6 +35,7 @@ class NetworkRoundImageView : RoundImageView, NetworkImageViewTarget.OnLoadingSt
         errorRes = attrs.getResourceId(R.styleable.NetworkImageView_errorRes, 0)
         loadCallback = attrs.getBoolean(R.styleable.NetworkImageView_loadCallback, false)
         attrs.recycle()
+        this.setImageResource(loadingRes)
         //加载图片
         load(imageUrl)
     }

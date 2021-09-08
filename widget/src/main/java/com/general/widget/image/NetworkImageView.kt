@@ -36,6 +36,7 @@ class NetworkImageView : BaseImageView, NetworkImageViewTarget.OnLoadingStatusCh
         loadingRes = attrs.getResourceId(R.styleable.NetworkImageView_loadingRes, 0)
         errorRes = attrs.getResourceId(R.styleable.NetworkImageView_errorRes, 0)
         loadCallback = attrs.getBoolean(R.styleable.NetworkImageView_loadCallback, false)
+        this.setImageResource(loadingRes)
         attrs.recycle()
         //加载图片
         load(imageUrl)
