@@ -68,9 +68,11 @@ class NetworkImageView : BaseImageView, NetworkImageViewTarget.OnLoadingStatusCh
     }
 
     override fun onStart() {
+        this.setImageResource(loadingRes)
     }
 
     override fun onError() {
+        this.setImageResource(errorRes)
         if (::onLoaderListener.isInitialized) {
             onLoaderListener.invoke(false)
         }

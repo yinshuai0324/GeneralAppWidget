@@ -67,9 +67,11 @@ class NetworkRoundImageView : RoundImageView, NetworkImageViewTarget.OnLoadingSt
 
     override fun onStart() {
         Log.i("===>>>", "开始加载图片:${imageUrl}")
+        this.setImageResource(loadingRes)
     }
 
     override fun onError() {
+        this.setImageResource(errorRes)
         if (::onLoaderListener.isInitialized) {
             onLoaderListener.invoke(false)
         }
