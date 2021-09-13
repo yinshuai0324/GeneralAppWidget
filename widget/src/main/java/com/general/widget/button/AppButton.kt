@@ -112,7 +112,7 @@ class AppButton : AppCompatTextView, RoundLayout, View.OnClickListener {
         //默认字体居中
         gravity = Gravity.CENTER
         //设置默认字体颜色
-        setTextColor(helper.getColor(R.color.color_FFFFFF))
+        setTextColor(currentTextColor)
         //设置点击事件
         this.setOnClickListener(this)
     }
