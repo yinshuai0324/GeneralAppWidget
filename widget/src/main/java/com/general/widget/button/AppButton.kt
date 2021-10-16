@@ -125,7 +125,6 @@ class AppButton : AppCompatTextView, RoundLayout, View.OnClickListener {
     }
 
     override fun draw(canvas: Canvas) {
-        Log.i("===>>>", "draw")
         helper.onBeforeDraw(canvas)
         super.draw(canvas)
         helper.onAfterDraw(canvas)
@@ -133,7 +132,6 @@ class AppButton : AppCompatTextView, RoundLayout, View.OnClickListener {
 
 
     override fun onDraw(canvas: Canvas) {
-        Log.i("===>>>", "onDraw")
         //绘制背景
         onDrawBody(canvas)
         super.onDraw(canvas)
@@ -246,6 +244,14 @@ class AppButton : AppCompatTextView, RoundLayout, View.OnClickListener {
      */
     fun isDisable(): Boolean {
         return disable
+    }
+
+    /**
+     * 设置是否禁用
+     */
+    fun setDisable(isDisable: Boolean){
+        this.disable = isDisable
+        invalidate()
     }
 
     /**
