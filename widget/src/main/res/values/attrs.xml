@@ -204,4 +204,14 @@
             <enum name="zoomAnim" value="2" />
         </attr>
     </declare-styleable>
+
+    <!--开关按钮-->
+    <declare-styleable name="SwitchButton">
+        <!--关按钮图片-->
+        <attr name="offIcon" format="reference" />
+        <!--开按钮图片-->
+        <attr name="onIcon" format="reference" />
+        <!--是否为开-->
+        <attr name="isOn" format="boolean" />
+    </declare-styleable>
 </resources>

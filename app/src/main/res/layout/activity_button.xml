@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="#F5F5F5"
     android:layout_height="match_parent">
 
     <LinearLayout
@@ -69,6 +70,14 @@
             app:clickAnimType="zoomAnim"
             app:disable="true"
             app:isCircle="true" />
+
+
+        <com.general.widget.button.SwitchButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:offIcon="@drawable/ic_toast_succeed"
+            app:onIcon="@drawable/ic_toast_info" />
 
     </LinearLayout>
 
