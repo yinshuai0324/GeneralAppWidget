@@ -181,7 +181,7 @@ class AppButton : AppCompatTextView, RoundLayout, View.OnClickListener {
         when (clickAnimType) {
             1 -> {
                 //绘制背景颜色
-                bodyPaint.color = bodyColor
+                bodyPaint.color = if (disable) disableColor else bodyColor
                 super.setTextColor(mTextColor)
                 invalidate()
             }
