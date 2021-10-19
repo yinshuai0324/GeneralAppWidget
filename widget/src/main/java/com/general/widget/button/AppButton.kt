@@ -251,6 +251,7 @@ class AppButton : AppCompatTextView, RoundLayout, View.OnClickListener {
      */
     fun setDisable(isDisable: Boolean){
         this.disable = isDisable
+        bodyPaint.color = if (disable) disableColor else bodyColor
         invalidate()
     }
 
