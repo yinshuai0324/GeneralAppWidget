@@ -187,19 +187,19 @@ class RoundHelper {
         roundParams[1] = radiusTopLeft - borderWidth
         roundParams[2] = radiusTopRight - borderWidth
         roundParams[3] = radiusTopRight - borderWidth
-        roundParams[4] = radiusBottomLeft - borderWidth
-        roundParams[5] = radiusBottomLeft - borderWidth
-        roundParams[6] = radiusBottomRight - borderWidth
-        roundParams[7] = radiusBottomRight - borderWidth
+        roundParams[4] = radiusBottomRight - borderWidth
+        roundParams[5] = radiusBottomRight - borderWidth
+        roundParams[6] = radiusBottomLeft - borderWidth
+        roundParams[7] = radiusBottomLeft - borderWidth
         //更新边框圆角的值
         borderRoundParams[0] = radiusTopLeft
         borderRoundParams[1] = radiusTopLeft
         borderRoundParams[2] = radiusTopRight
         borderRoundParams[3] = radiusTopRight
-        borderRoundParams[4] = radiusBottomLeft
-        borderRoundParams[5] = radiusBottomLeft
-        borderRoundParams[6] = radiusBottomRight
-        borderRoundParams[7] = radiusBottomRight
+        borderRoundParams[4] = radiusBottomRight
+        borderRoundParams[5] = radiusBottomRight
+        borderRoundParams[6] = radiusBottomLeft
+        borderRoundParams[7] = radiusBottomLeft
     }
 
 
