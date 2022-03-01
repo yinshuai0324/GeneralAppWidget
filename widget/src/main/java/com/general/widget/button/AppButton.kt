@@ -163,7 +163,7 @@ class AppButton : AppCompatTextView, RoundLayout, View.OnClickListener {
         when (clickAnimType) {
             1 -> {
                 //绘制背景颜色
-                bodyPaint.color = clickColor
+                bodyPaint.color = if (disable) disableColor else clickColor
                 super.setTextColor(ColorUtils.getColorAlpha(0.5f, mTextColor))
                 invalidate()
             }
@@ -239,6 +239,11 @@ class AppButton : AppCompatTextView, RoundLayout, View.OnClickListener {
         helper.setIsCircle(circle)
     }
 
+    override fun setBackgroundColors(color: Int) {
+        helper.setBackgroundColor(color)
+    }
+
+
     /**
      * 是否是禁用状态
      */
@@ -249,7 +254,7 @@ class AppButton : AppCompatTextView, RoundLayout, View.OnClickListener {
     /**
      * 设置是否禁用
      */
-    fun setDisable(isDisable: Boolean){
+    fun setDisable(isDisable: Boolean) {
         this.disable = isDisable
         bodyPaint.color = if (disable) disableColor else bodyColor
         invalidate()
@@ -262,6 +267,11 @@ class AppButton : AppCompatTextView, RoundLayout, View.OnClickListener {
         this.mTextColor = color
         super.setTextColor(color)
     }
+
+
+
+
+
 
     override fun onClick(v: View) {
         if (disable) {

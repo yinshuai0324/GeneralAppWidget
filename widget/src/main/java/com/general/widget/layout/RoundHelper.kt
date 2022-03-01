@@ -322,6 +322,15 @@ class RoundHelper {
         rootView.invalidate()
     }
 
+
+    /**
+     * 设置背景颜色
+     */
+    fun setBackgroundColor(color: Int) {
+        backgroundColor = getColor(color)
+        rootView.invalidate()
+    }
+
     /**
      * 设置是否是圆形
      */

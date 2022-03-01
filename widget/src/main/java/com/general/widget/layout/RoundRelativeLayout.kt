@@ -58,4 +58,8 @@ class RoundRelativeLayout : RelativeLayout, RoundLayout {
     override fun setIsCircle(circle: Boolean) {
         helper.setIsCircle(circle)
     }
+
+    override fun setBackgroundColors(color: Int) {
+        helper.setBackgroundColor(color)
+    }
 }

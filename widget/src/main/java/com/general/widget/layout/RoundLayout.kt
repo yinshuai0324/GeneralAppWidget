@@ -35,4 +35,9 @@ interface RoundLayout {
      * 设置是否圆形
      */
     fun setIsCircle(circle: Boolean)
+
+    /**
+     * 设置背景颜色
+     */
+    fun setBackgroundColors(color: Int)
 }
